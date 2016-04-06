@@ -33,14 +33,3 @@ class BoltzmannPolicy( object ):
         actionInd = rv.rvs( size=1 )[0]
         return actionSpace[actionInd]
 
-
-
-# pi = BoltzmannPolicy( 0.1 )
-# qAr = np.array( [0.1, 0.1, 2.0, 2.5] )
-# print 'qAr= ' + str( qAr )
-# pi.selectionProbabilities( qAr )
-# print 'pAr= ' + str( qAr )
-# actionSpace = [ 'l', 'r', 't', 'd' ]
-# print 'actionSpace= ' + str( actionSpace )
-# for _ in range( 10 ):
-#     print 'action= ' + str( pi.sampleAction( actionSpace=actionSpace, actionProb=qAr ) )
