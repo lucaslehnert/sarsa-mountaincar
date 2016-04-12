@@ -127,6 +127,7 @@ def runExperiment( alpha=0.2, traceLambda=0.9, maxTransitions=10000, episodes=10
     resultFile = open( experimentJSON, 'w' )
     resultFile.write( experimentStr )
     resultFile.close()
+    print 'Saving json file to ' + str(experimentJSON)
 
     plt.plot( range( 1, episodes + 1 ), episodeLengths )
     plt.xlabel( 'Episode' )
@@ -134,6 +135,7 @@ def runExperiment( alpha=0.2, traceLambda=0.9, maxTransitions=10000, episodes=10
     plt.xlim( [0, episodes + 1] )
     plt.ylim( [0, 1.05 * maxTransitions] )
     plt.savefig( experimentPlot )
+    print 'Saving plot file to ' + str(experimentPlot)
 
 if __name__ == '__main__':
     import argparse
